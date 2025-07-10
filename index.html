@@ -71,7 +71,7 @@
             margin-bottom: 1rem;
             letter-spacing: 0.15em;
             opacity: 0;
-            animation: slideUp 1s ease-out 0.5s forwards;
+            animation: slideUp 1s ease-out 0.5s forwards, dateBreathe 6s ease-in-out 1.5s infinite;
         }
 
         .message {
@@ -122,6 +122,17 @@
             }
             50% {
                 transform: scale(1.1) rotate(180deg);
+            }
+        }
+
+        @keyframes dateBreathe {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.02);
+                opacity: 0.85;
             }
         }
 
